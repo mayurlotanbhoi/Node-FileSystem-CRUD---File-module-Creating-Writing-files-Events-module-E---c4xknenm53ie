@@ -13,13 +13,12 @@ const myFileWriter = async (fileName, fileContent) => {
 const myFileReader = async (fileName) => {
   // write code here
   // dont chnage function name
-  fs.readFile(fileName)
-    .then((data) => {
-     console.log(data);
-    })
-    .catch((err) => {
-      console.log(err);
-    });
+  try {
+    const data = await fs.readFile(fileName, { encoding: 'utf8' });
+    console.log(data);
+  } catch (err) {
+    console.log(err);
+  }
 };
 
 const myFileUpdater = async (fileName, fileContent) => {
