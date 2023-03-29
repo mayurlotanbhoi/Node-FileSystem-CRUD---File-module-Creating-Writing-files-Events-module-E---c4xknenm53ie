@@ -15,7 +15,7 @@ const myFileReader = async (fileName) => {
   // dont chnage function name
   fs.readFile(fileName)
     .then((data) => {
-     
+     console.log(data);
     })
     .catch((err) => {
       console.log(err);
