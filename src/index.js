@@ -24,7 +24,7 @@ const myFileUpdater = async (fileName, fileContent) => {
   // write code here
   // dont chnage function name
 
-  fs.appendFile(fileName, fileContent)
+  fs.readFile(fileName,'utf8', (er, data))
     .then(() => {})
     .catch((err) => {
       console.log(err);
