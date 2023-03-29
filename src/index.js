@@ -13,7 +13,7 @@ const myFileWriter = async (fileName, fileContent) => {
 const myFileReader = async (fileName) => {
   // write code here
   // dont chnage function name
-  fs.readFile(fileName, (er, data))
+  fs.readFile(fileName,'utf8', (er, data))
     .then(() => {})
     .catch((err) => {
       console.log(err);
@@ -24,7 +24,7 @@ const myFileUpdater = async (fileName, fileContent) => {
   // write code here
   // dont chnage function name
 
-  fs.readFile(fileName,'utf8', (er, data))
+  fs.appendFile(fileName, fileContent)
     .then(() => {})
     .catch((err) => {
       console.log(err);
